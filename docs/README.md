@@ -29,52 +29,122 @@ Aplikasi ini mengotomatiskan seluruh siklus akuntansi, mulai dari pencatatan tra
 
 ---
 
-## ✨ Fitur Utama
+## 📊 Standar Akuntansi & Chart of Accounts (CoA)
 
-1. Manajemen Data Master (Akun, Pelanggan, Supplier, Produk, Karyawan)
-2. Input Transaksi Dinamis (Penjualan, Pembelian, Kas, Jurnal Penyesuaian, Pinjaman)
-3. Mesin Akuntansi Otomatis (Jurnal, Validasi Balance, Buku Besar)
-4. Laporan Keuangan Instan (Neraca Saldo, Laba Rugi, Neraca) + Ekspor PDF
+**Standar Akuntansi:** SAK ETAP (Entitas Tanpa Akuntabilitas Publik)  
+**Format Kode Akun:** 3 digit numerik (mengacu pada standar perusahaan jasa & dagang)
+
+### 1. ASET (HARTA)
+
+#### Aset Lancar
+| Kode | Nama Akun | Normal Saldo |
+|------|-----------|--------------|
+| 111  | Kas | Debit |
+| 112  | Piutang Usaha | Debit |
+| 113  | Piutang Karyawan | Debit |
+| 114  | Perlengkapan Kantor | Debit |
+| 115  | Persediaan Barang Dagang | Debit |
+| 116  | Sewa Dibayar di Muka | Debit |
+| 117  | Iklan Dibayar di Muka | Debit |
+
+#### Aset Tetap
+| Kode | Nama Akun | Normal Saldo |
+|------|-----------|--------------|
+| 121  | Tanah | Debit |
+| 122  | Peralatan Kantor | Debit |
+| 123  | Akumulasi Penyusutan Peralatan | Kredit |
+| 124  | Gedung/Kantor | Debit |
+| 125  | Akumulasi Penyusutan Gedung | Kredit |
+
+#### Aset Tak Berwujud
+| Kode | Nama Akun | Normal Saldo |
+|------|-----------|--------------|
+| 141  | Goodwill | Debit |
+| 142  | Hak Paten | Debit |
+| 143  | Hak Cipta (Software) | Debit |
 
 ---
 
-## 📚 Dokumentasi Lengkap
+### 2. KEWAJIBAN (UTANG)
 
-Untuk detail teknis, silakan buka file dokumentasi berikut:
+#### Utang Jangka Pendek
+| Kode | Nama Akun | Normal Saldo |
+|------|-----------|--------------|
+| 211  | Utang Usaha | Kredit |
+| 212  | Utang Gaji | Kredit |
+| 213  | Utang Pajak | Kredit |
+| 214  | Utang Bunga | Kredit |
+| 215  | Utang Bank | Kredit |
 
-- 📄 **[Standar Akuntansi & Chart of Accounts (CoA)](docs/STANDAR_AKUNTANSI_COA.md)**
-- 🗄️ **[Desain Database & ERD](docs/DATABASE_SCHEMA.md)**
+#### Utang Jangka Panjang
+| Kode | Nama Akun | Normal Saldo |
+|------|-----------|--------------|
+| 221  | Utang Obligasi | Kredit |
+| 222  | Utang Hipotik | Kredit |
 
 ---
 
-## 🚀 Panduan Instalasi
+### 3. EKUITAS (MODAL)
+| Kode | Nama Akun | Normal Saldo |
+|------|-----------|--------------|
+| 311  | Modal Pemilik | Kredit |
+| 312  | Prive Pemilik | Debit |
+| 313  | Laba Ditahan | Kredit |
 
-Ikuti langkah-langkah berikut untuk menjalankan aplikasi di lokal:
+---
 
-### Prasyarat
-- PHP 8.2+, Composer, MySQL 8.0
+### 4. PENDAPATAN
+| Kode | Nama Akun | Normal Saldo |
+|------|-----------|--------------|
+| 411  | Pendapatan Penjualan | Kredit |
+| 412  | Pendapatan Jasa (Bunga Pembiayaan) | Kredit |
 
-### Langkah Instalasi
+---
 
-```bash
-# 1. Clone repositori
-git clone https://github.com/username-anda/sia-savar.git
-cd sia-savar
+### 5. BEBAN
+| Kode | Nama Akun | Normal Saldo |
+|------|-----------|--------------|
+| 511  | Beban Gaji | Debit |
+| 512  | Beban Listrik, Air, Telepon | Debit |
+| 513  | Beban Pajak | Debit |
+| 514  | Beban Bunga | Debit |
+| 515  | Harga Pokok Penjualan (HPP) | Debit |
+| 516  | Beban Sewa Gedung | Debit |
+| 517  | Beban Asuransi | Debit |
+| 518  | Beban Perlengkapan Kantor | Debit |
+| 519  | Beban Iklan | Debit |
+| 520  | Beban Penyusutan Peralatan | Debit |
+| 521  | Beban Penyusutan Gedung | Debit |
+| 522  | Beban Administrasi & Umum | Debit |
+| 523  | Beban Lain-lain | Debit |
 
-# 2. Install dependensi
-composer install
+---
 
-# 3. Buat file .env dan generate key
-cp .env.example .env
-php artisan key:generate
+## 🗄️ Struktur Database (ERD)
 
-# 4. Atur koneksi database di file .env
-# DB_DATABASE=db_sia_savar
-# DB_USERNAME=root
-# DB_PASSWORD=
+Untuk melihat detail desain database (daftar tabel, field, dan relasi), silakan buka file:  
+📄 **[Desain Database & ERD](docs/DATABASE_SCHEMA.md)**
 
-# 5. Jalankan migrasi
-php artisan migrate
+---
 
-# 6. Jalankan server
-php artisan serve
+## 📈 Status Pengerjaan Proyek
+
+| Fase | Deskripsi | Status |
+|------|-----------|--------|
+| **Fase 1** | Standarisasi Bisnis & Perancangan Database | ✅ Selesai |
+| **Fase 2** | Pembuatan Form Input (Master & Transaksi) | ⏳ Belum |
+| **Fase 3** | Pemrosesan Data (Mesin Akuntansi) | ⏳ Belum |
+| **Fase 4** | Output Informasi (Neraca Saldo & Laporan) | ⏳ Belum |
+
+---
+
+## 👥 Kontributor
+
+- **Fakhry Arief Rahman** (11024006) – Pengembang Utama
+- **Apriani Puti Purfini, S.Kom., M.T.** – Dosen Pembimbing
+
+---
+
+## 📄 Lisensi
+
+Proyek ini dibuat untuk keperluan akademik **Praktikum Sistem Informasi Akuntansi II**.
