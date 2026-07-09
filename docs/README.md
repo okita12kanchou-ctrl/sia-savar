@@ -127,16 +127,6 @@ Untuk melihat detail desain database (daftar tabel, field, dan relasi), silakan 
 
 ---
 
-## 📈 Status Pengerjaan Proyek
-
-| Fase | Deskripsi | Status |
-|------|-----------|--------|
-| **Fase 1** | Standarisasi Bisnis & Perancangan Database | ✅ Selesai |
-| **Fase 2** | Pembuatan Form Input (Master & Transaksi) | ⏳ Belum |
-| **Fase 3** | Pemrosesan Data (Mesin Akuntansi) | ⏳ Belum |
-| **Fase 4** | Output Informasi (Neraca Saldo & Laporan) | ⏳ Belum |
-
----
 
 ## 👥 Kontributor
 
