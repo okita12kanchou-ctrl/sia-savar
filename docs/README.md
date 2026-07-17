@@ -9,12 +9,9 @@
 
 ## 📋 Tentang Aplikasi
 
-**SIA-SAVAR** adalah aplikasi sistem informasi akuntansi terintegrasi yang dirancang khusus untuk **PT Savar Dinamika Teknologi**, sebuah perusahaan yang bergerak di dua bidang sekaligus:
+**SIA-SAVAR** adalah aplikasi sistem informasi akuntansi terintegrasi yang dirancang khusus untuk **PT Savar Dinamika Teknologi**, sebuah perusahaan yang bergerak di bidang **perdagangan produk office** (perlengkapan kantor).
 
-- **Teknologi & Jasa** – menyediakan layanan pembiayaan tenaga kerja (pinjaman karyawan).
-- **Perdagangan** – menjual produk *office* (perlengkapan kantor).
-
-Aplikasi ini mengotomatiskan seluruh siklus akuntansi, mulai dari pencatatan transaksi hingga penyusunan laporan keuangan.
+Aplikasi ini mengotomatiskan seluruh siklus akuntansi, mulai dari pencatatan transaksi penjualan & pembelian hingga penyusunan laporan keuangan (Laba Rugi dan Neraca).
 
 ---
 
@@ -31,8 +28,8 @@ Aplikasi ini mengotomatiskan seluruh siklus akuntansi, mulai dari pencatatan tra
 
 ## 📊 Standar Akuntansi & Chart of Accounts (CoA)
 
-**Standar Akuntansi:** SAK ETAP (Entitas Tanpa Akuntabilitas Publik)  
-**Format Kode Akun:** 3 digit numerik (mengacu pada standar perusahaan jasa & dagang)
+**Standar Akuntansi:** SAK EP (Standar Akuntansi Keuangan Entitas Privat)  
+**Format Kode Akun:** 3 digit numerik (mengacu pada standar perusahaan dagang)
 
 ### 1. ASET (HARTA)
 
@@ -41,11 +38,10 @@ Aplikasi ini mengotomatiskan seluruh siklus akuntansi, mulai dari pencatatan tra
 |------|-----------|--------------|
 | 111  | Kas | Debit |
 | 112  | Piutang Usaha | Debit |
-| 113  | Piutang Karyawan | Debit |
-| 114  | Perlengkapan Kantor | Debit |
-| 115  | Persediaan Barang Dagang | Debit |
-| 116  | Sewa Dibayar di Muka | Debit |
-| 117  | Iklan Dibayar di Muka | Debit |
+| 113  | Perlengkapan Kantor | Debit |
+| 114  | Persediaan Barang Dagang | Debit |
+| 115  | Sewa Dibayar di Muka | Debit |
+| 116  | Iklan Dibayar di Muka | Debit |
 
 #### Aset Tetap
 | Kode | Nama Akun | Normal Saldo |
@@ -97,7 +93,6 @@ Aplikasi ini mengotomatiskan seluruh siklus akuntansi, mulai dari pencatatan tra
 | Kode | Nama Akun | Normal Saldo |
 |------|-----------|--------------|
 | 411  | Pendapatan Penjualan | Kredit |
-| 412  | Pendapatan Jasa (Bunga Pembiayaan) | Kredit |
 
 ---
 
@@ -127,6 +122,7 @@ Untuk melihat detail desain database (daftar tabel, field, dan relasi), silakan 
 
 ---
 
+---
 
 ## 👥 Kontributor
 
